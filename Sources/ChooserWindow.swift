@@ -76,6 +76,8 @@ struct ChooserView: View {
             HStack {
                 Button("Refresh") { model.reload() }
                 Spacer()
+                Link("Support on Ko-fi ♥", destination: TuckController.supportURL)
+                    .font(.callout)
                 if !SettingsDriver.isTrusted {
                     Button("Grant Accessibility Access…") {
                         SettingsDriver.promptForTrust()

@@ -9,6 +9,9 @@ import ServiceManagement
 /// no « button. "Peek" simply switches them on again for a while.
 @MainActor
 final class TuckController: NSObject {
+    /// Where the "Support Tuck on Ko-fi" menu item goes.
+    static let supportURL = URL(string: "https://ko-fi.com/YOUR-KOFI-NAME")!
+
     let driver = SettingsDriver()
     private var statusItem: NSStatusItem!
     private var autoHideTimer: Timer?
@@ -225,6 +228,9 @@ final class TuckController: NSObject {
         }
 
         menu.addItem(.separator())
+        let support = NSMenuItem(title: "Support Tuck on Ko-fi ♥", action: #selector(openSupport), keyEquivalent: "")
+        support.target = self
+        menu.addItem(support)
         menu.addItem(NSMenuItem(title: "Quit Tuck", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
 
         statusItem.menu = menu
@@ -269,6 +275,10 @@ final class TuckController: NSObject {
     @objc private func toggleKeepReady() {
         Preferences.keepSettingsReady.toggle()
         if Preferences.keepSettingsReady { warmUp() }
+    }
+
+    @objc private func openSupport() {
+        NSWorkspace.shared.open(Self.supportURL)
     }
 
     @objc private func grantAccessibility() {

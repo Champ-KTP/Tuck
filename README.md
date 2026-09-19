@@ -2,6 +2,11 @@
 
 **Hide menu bar icons on macOS 26 Tahoe and macOS 27, the way Apple does it, with a one-click peek.**
 
+[![Support me on Ko-fi](https://img.shields.io/badge/Ko--fi-Support%20Tuck-ff5e5b?logo=ko-fi&logoColor=white)](https://ko-fi.com/YOUR-KOFI-NAME)
+[![Latest release](https://img.shields.io/github/v/release/<you>/Tuck?label=download)](../../releases/latest)
+![Platform](https://img.shields.io/badge/macOS-26%20%7C%2027-black?logo=apple)
+![License](https://img.shields.io/badge/license-MIT-green)
+
 Tuck is a tiny (600 KB) native menu bar utility. Pick the apps whose icons you
 want out of the way; they vanish from the menu bar on every display, with no
 overflow `«` button and no gaps. Click Tuck's dot to peek at them, and they tuck
@@ -48,8 +53,10 @@ the Accessibility API, and adds the "peek" that Hidden Bar users miss.
 
 ## Install
 
-1. Download `Tuck-x.y.zip` from the [Releases](../../releases) page and unzip it.
-2. Move `Tuck.app` to `/Applications`.
+1. Download `Tuck-x.y.dmg` from the [Releases](../../releases) page, open it,
+   and drag `Tuck.app` onto the `Applications` folder (a `.zip` of the app is
+   attached as well).
+2. Eject the disk image.
 3. The app is not notarized. On first launch macOS will refuse to open it:
    right-click `Tuck.app` → **Open** → **Open**, or run
 
@@ -128,6 +135,15 @@ kill -USR1 $(pgrep -x Tuck)   # peek / hide
 kill -USR2 $(pgrep -x Tuck)   # open the chooser
 defaults write com.champ.tuck debugLog -bool true   # log to ~/Library/Logs/Tuck.log
 ```
+
+## Support
+
+Tuck is free and open source. If it makes your menu bar nicer, you can buy me
+a coffee:
+
+<a href="https://ko-fi.com/YOUR-KOFI-NAME"><img src="https://storage.ko-fi.com/cdn/kofi3.png?v=3" alt="Buy me a coffee at ko-fi.com" height="40"></a>
+
+There is also a **Support Tuck on Ko-fi** item in the app's right-click menu.
 
 ## License
 
