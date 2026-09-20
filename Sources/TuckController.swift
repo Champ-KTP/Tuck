@@ -10,7 +10,7 @@ import ServiceManagement
 @MainActor
 final class TuckController: NSObject {
     /// Where the "Support Tuck on Ko-fi" menu item goes.
-    static let supportURL = URL(string: "https://ko-fi.com/YOUR-KOFI-NAME")!
+    static let supportURL = URL(string: "https://ko-fi.com/champktp")!
 
     let driver = SettingsDriver()
     private var statusItem: NSStatusItem!
