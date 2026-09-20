@@ -3,7 +3,7 @@
 **Hide menu bar icons on macOS 26 Tahoe and macOS 27, the way Apple does it, with a one-click peek.**
 
 [![Support me on Ko-fi](https://img.shields.io/badge/Ko--fi-Support%20Tuck-ff5e5b?logo=ko-fi&logoColor=white)](https://ko-fi.com/champktp)
-[![Latest release](https://img.shields.io/github/v/release/<you>/Tuck?label=download)](../../releases/latest)
+[![Latest release](https://img.shields.io/github/v/release/Champ-KTP/Tuck?label=download)](../../releases/latest)
 ![Platform](https://img.shields.io/badge/macOS-26%20%7C%2027-black?logo=apple)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
@@ -117,7 +117,7 @@ fires.
 Requires only the Xcode Command Line Tools (`xcode-select --install`).
 
 ```bash
-git clone https://github.com/<you>/Tuck.git
+git clone https://github.com/Champ-KTP/Tuck.git
 cd Tuck
 ./build.sh
 cp -R build/Tuck.app /Applications/
