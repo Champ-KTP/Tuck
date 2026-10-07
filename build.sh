@@ -33,6 +33,8 @@ if [[ -f make-icon.swift ]]; then
 fi
 
 echo "▸ Signing (ad-hoc)…"
+# Finder metadata / quarantine attributes make codesign refuse the bundle.
+xattr -cr "$APP"
 # A stable designated requirement keeps the Accessibility grant valid across
 # rebuilds (an ad-hoc signature's default requirement changes with every build).
 codesign --force --deep --sign - \
